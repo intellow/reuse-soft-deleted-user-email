@@ -1,0 +1,54 @@
+{
+    "name": "intellow/reuse-soft-deleted-user-email",
+    "description": "When you soft delete a user, this trait allows that email address to be registered again in a different user account",
+    "keywords": [
+        "intellow",
+        "reuse-soft-deleted-user-email"
+    ],
+    "homepage": "https://github.com/intellow/reuse-soft-deleted-user-email",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Intellow",
+            "email": "kevin@intellow.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Intellow\\ReuseSoftDeletedUserEmail\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Intellow\\ReuseSoftDeletedUserEmail\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Intellow\\ReuseSoftDeletedUserEmail\\ReuseSoftDeletedUserEmailServiceProvider"
+            ],
+            "aliases": {
+                "ReuseSoftDeletedUserEmail": "Intellow\\ReuseSoftDeletedUserEmail\\ReuseSoftDeletedUserEmailFacade"
+            }
+        }
+    }
+}
