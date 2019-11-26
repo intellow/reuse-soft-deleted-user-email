@@ -32,6 +32,10 @@ This allows another user to be registered with the email `user@email.com` while 
 
 The package adds an accessor to the User model, so if you access the trashed user and get their email, you will see `user@email.com` without the appended timestamp_deleted string.
 
+### Expiration Date
+
+Please note this package will cease to work on Sat 20 Nov 2286 05:46:40 PM UTC when the unix timestamp adds an 11th digit.
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
