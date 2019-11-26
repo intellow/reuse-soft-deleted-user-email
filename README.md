@@ -16,16 +16,19 @@ composer require intellow/reuse-soft-deleted-user-email
 ```
 
 ## Usage
-
+In a Laravel app with users and SoftDeletes, add the trait to your User model
 ``` php
-// Usage description here
+class User extends Authenticatable
+{
+    use SoftDeletes;
+    use ReuseSoftDeletedEmails;
 ```
 
-### Testing
+Now when a user is deleted, their email in the database will change from `user@email.com` to `user@email.com1574789049_deleted` where 1574789049 is the timestamp when the user was deleted.
 
-``` bash
-composer test
-```
+This allows another user to be registered with the email `user@email.com` while retaining the record of the old deleted user.
+
+The package adds an accessor to the User model, so if you access the trashed user and get their email, you will see `user@email.com` without the appended timestamp_deleted string.
 
 ### Changelog
 

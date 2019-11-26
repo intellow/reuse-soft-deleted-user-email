@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "5.8.*"
+        "illuminate/support": "^5.6|^6.0"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*",
@@ -40,15 +40,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Intellow\\ReuseSoftDeletedUserEmail\\ReuseSoftDeletedUserEmailServiceProvider"
-            ],
-            "aliases": {
-                "ReuseSoftDeletedUserEmail": "Intellow\\ReuseSoftDeletedUserEmail\\ReuseSoftDeletedUserEmailFacade"
-            }
-        }
     }
 }
