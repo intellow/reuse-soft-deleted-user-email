@@ -1,11 +1,13 @@
-# Very short description of the package
+# Reuse Soft Deleted Emails
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/intellow/reuse-soft-deleted-user-email.svg?style=flat-square)](https://packagist.org/packages/intellow/reuse-soft-deleted-user-email)
 [![Build Status](https://img.shields.io/travis/intellow/reuse-soft-deleted-user-email/master.svg?style=flat-square)](https://travis-ci.org/intellow/reuse-soft-deleted-user-email)
 [![Quality Score](https://img.shields.io/scrutinizer/g/intellow/reuse-soft-deleted-user-email.svg?style=flat-square)](https://scrutinizer-ci.com/g/intellow/reuse-soft-deleted-user-email)
 [![Total Downloads](https://img.shields.io/packagist/dt/intellow/reuse-soft-deleted-user-email.svg?style=flat-square)](https://packagist.org/packages/intellow/reuse-soft-deleted-user-email)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+When you soft delete a user in Laravel, that email cannot be registered again since the email field on the users table must be unique.
+
+This package solves this problem and allows you to soft delete a user record, retain the original email as history, and still register a new user account with the same email address.
 
 ## Installation
 
